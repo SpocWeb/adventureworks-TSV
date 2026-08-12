@@ -1,39 +1,39 @@
-OpFlag	UnitMeasureCode	Name	ModifiedDate
-V	BOX	Boxes	2008-04-30 00:00:00
-V	BTL	Bottle	2008-04-30 00:00:00
-V	C 	Celsius	2008-04-30 00:00:00
-V	CAN	Canister	2008-04-30 00:00:00
-V	CAR	Carton	2008-04-30 00:00:00
-V	CBM	Cubic meters	2008-04-30 00:00:00
-V	CCM	Cubic centimeter	2008-04-30 00:00:00
-V	CDM	Cubic decimeter	2008-04-30 00:00:00
-V	CM 	Centimeter	2008-04-30 00:00:00
-V	CM2	Square centimeter	2008-04-30 00:00:00
-V	CR 	Crate	2008-04-30 00:00:00
-V	CS 	Case	2008-04-30 00:00:00
-V	CTN	Container	2008-04-30 00:00:00
-V	DM 	Decimeter	2008-04-30 00:00:00
-V	DZ 	Dozen	2008-04-30 00:00:00
-V	EA 	Each	2008-04-30 00:00:00
-V	FT3	Cubic foot	2008-04-30 00:00:00
-V	G 	Gram	2008-04-30 00:00:00
-V	GAL	Gallon	2008-04-30 00:00:00
-V	IN 	Inch	2008-04-30 00:00:00
-V	KG 	Kilogram	2008-04-30 00:00:00
-V	KGV	Kilogram/cubic meter	2008-04-30 00:00:00
-V	KM 	Kilometer	2008-04-30 00:00:00
-V	KT 	Kiloton	2008-04-30 00:00:00
-V	L 	Liter	2008-04-30 00:00:00
-V	LB 	US pound	2008-04-30 00:00:00
-V	M 	Meter	2008-04-30 00:00:00
-V	M2 	Square meter	2008-04-30 00:00:00
-V	M3 	Cubic meter	2008-04-30 00:00:00
-V	MG 	Milligram	2008-04-30 00:00:00
-V	ML 	Milliliter	2008-04-30 00:00:00
-V	MM 	Millimeter	2008-04-30 00:00:00
-V	OZ 	Ounces	2008-04-30 00:00:00
-V	PAK	Pack	2008-04-30 00:00:00
-V	PAL	Pallet	2008-04-30 00:00:00
-V	PC 	Piece	2008-04-30 00:00:00
-V	PCT	Percentage	2008-04-30 00:00:00
-V	PT 	Pint, US liquid	2008-04-30 00:00:00
+UnitMeasureCode	Name	ModifiedDate
+BOX	Boxes	2008-04-30 00:00:00
+BTL	Bottle	2008-04-30 00:00:00
+C  	Celsius	2008-04-30 00:00:00
+CAN	Canister	2008-04-30 00:00:00
+CAR	Carton	2008-04-30 00:00:00
+CBM	Cubic meters	2008-04-30 00:00:00
+CCM	Cubic centimeter	2008-04-30 00:00:00
+CDM	Cubic decimeter	2008-04-30 00:00:00
+CM 	Centimeter	2008-04-30 00:00:00
+CM2	Square centimeter	2008-04-30 00:00:00
+CR 	Crate	2008-04-30 00:00:00
+CS 	Case	2008-04-30 00:00:00
+CTN	Container	2008-04-30 00:00:00
+DM 	Decimeter	2008-04-30 00:00:00
+DZ 	Dozen	2008-04-30 00:00:00
+EA 	Each	2008-04-30 00:00:00
+FT3	Cubic foot	2008-04-30 00:00:00
+G  	Gram	2008-04-30 00:00:00
+GAL	Gallon	2008-04-30 00:00:00
+IN 	Inch	2008-04-30 00:00:00
+KG 	Kilogram	2008-04-30 00:00:00
+KGV	Kilogram/cubic meter	2008-04-30 00:00:00
+KM 	Kilometer	2008-04-30 00:00:00
+KT 	Kiloton	2008-04-30 00:00:00
+L  	Liter	2008-04-30 00:00:00
+LB 	US pound	2008-04-30 00:00:00
+M  	Meter	2008-04-30 00:00:00
+M2 	Square meter	2008-04-30 00:00:00
+M3 	Cubic meter	2008-04-30 00:00:00
+MG 	Milligram	2008-04-30 00:00:00
+ML 	Milliliter	2008-04-30 00:00:00
+MM 	Millimeter	2008-04-30 00:00:00
+OZ 	Ounces	2008-04-30 00:00:00
+PAK	Pack	2008-04-30 00:00:00
+PAL	Pallet	2008-04-30 00:00:00
+PC 	Piece	2008-04-30 00:00:00
+PCT	Percentage	2008-04-30 00:00:00
+PT 	Pint, US liquid	2008-04-30 00:00:00
