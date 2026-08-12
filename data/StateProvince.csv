@@ -1,6 +1,9 @@
 ﻿\P\	StateProvinceID	StateProvinceCode	CountryRegionCode	IsOnlyStateProvinceFlag	Name	TerritoryID	rowguid	ModifiedDate\
 T	5	$	$	0	$	5	U	D
 N	0	1	1	0	1	0	0	0
+K	1	0	0	0	0	0	0	0
+t			CountryRegion			SalesTerritory		
+c			CountryRegionCode			TerritoryID		
 #
 V	1	AB 	CA	0	Alberta	6	298C2880-AB1C-4982-A5AD-A36EB4BA0D34	2014-02-08 10:17:21.587000000
 V	2	AK 	US	0	Alaska	1	5B7B8462-A888-4E0B-A3E1-7278F8AF107E	2014-02-08 10:17:21.587000000

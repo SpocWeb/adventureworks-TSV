@@ -1,6 +1,9 @@
 ﻿\P\	CurrencyRateID	CurrencyRateDate	FromCurrencyCode	ToCurrencyCode	AverageRate	EndOfDayRate	ModifiedDate\
 T	5	D	$	$	7	7	D
 N	0	0	1	1	0	0	0
+K	1	0	0	0	0	0	0
+t			Currency	Currency			
+c			CurrencyCode	CurrencyCode			
 #
 V	1	2011-05-31 00:00:00	USD	ARS	1	1.0002	2011-05-31 00:00:00
 V	2	2011-05-31 00:00:00	USD	AUD	1.5491	1.55	2011-05-31 00:00:00

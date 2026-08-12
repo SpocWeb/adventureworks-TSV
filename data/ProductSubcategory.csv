@@ -1,6 +1,9 @@
 ﻿\P\	ProductSubcategoryID	ProductCategoryID	Name	rowguid	ModifiedDate\
 T	5	5	$	U	D
 N	0	0	1	0	0
+K	1	0	0	0	0
+t		ProductCategory			
+c		ProductCategoryID			
 #
 V	1	1	Mountain Bikes	{2D364ADE-264A-433C-B092-4FCBF3804E01}	2008-04-30 00:00:00
 V	2	1	Road Bikes	{000310C0-BCC8-42C4-B0C3-45AE611AF06B}	2008-04-30 00:00:00

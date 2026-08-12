@@ -1,6 +1,9 @@
 ﻿\P\	CustomerID	PersonID	StoreID	TerritoryID	AccountNumber	rowguid	ModifiedDate\
 T	5	5	5	5	$	U	D
 N	0	0	0	0	1	0	0
+K	1	0	0	0	0	0	0
+t		Person	Store	SalesTerritory			
+c		BusinessEntityID	BusinessEntityID	TerritoryID			
 #
 V	1		934	1	AW00000001	{3F5AE95E-B87D-4AED-95B4-C3797AFCB74F}	2014-09-12 11:15:07.263000000
 V	2		1028	1	AW00000002	{E552F657-A9AF-4A7D-A645-C429D6E02491}	2014-09-12 11:15:07.263000000

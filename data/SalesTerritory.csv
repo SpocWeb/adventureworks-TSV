@@ -1,6 +1,9 @@
 ﻿\P\	TerritoryID	Name	CountryRegionCode	group	SalesYTD	SalesLastYear	CostYTD	CostLastYear	rowguid	ModifiedDate\
 T	5	$	$	$	7	7	7	7	U	D
 N	0	1	1	1	0	0	0	0	0	0
+K	1	0	0	0	0	0	0	0	0	0
+t			CountryRegion							
+c			CountryRegionCode							
 #
 V	1	Northwest	US	North America	7887186.7882	3298694.4938	0	0	{43689A10-E30B-497F-B0DE-11DE20267FF7}	2008-04-30 00:00:00
 V	2	Northeast	US	North America	2402176.8476	3607148.9371	0	0	{00FB7309-96CC-49E2-8363-0A1BA72486F2}	2008-04-30 00:00:00

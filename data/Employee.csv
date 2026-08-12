@@ -1,6 +1,9 @@
 ﻿\P\	BusinessEntityID	NationalIDNumber	LoginID	Org	OrganizationLevel	JobTitle	BirthDate	MaritalStatus	Gender	HireDate	SalariedFlag	VacationHours	SickLeaveHours	CurrentFlag	rowguid	ModifiedDate\
 T	5	$	$	$	5	$	D	$	$	D	0	5	5	0	U	D
 N	0	1	1	1	0	1	0	1	1	0	0	0	0	0	0	0
+K	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+t	Person															
+c	BusinessEntityID															
 #
 V	1	295847284	adventure-works\ken0		0	Chief Executive Officer	1969-01-29	S	M	2009-01-14	1	99	69	1	F01251E5-96A3-448D-981E-0F99D789110D	2014-06-30 00:00:00
 V	2	245797967	adventure-works\terri0	58	1	Vice President of Engineering	1971-08-01	S	F	2008-01-31	1	1	20	1	45E8F437-670D-4409-93CB-F9424A40D6EE	2014-06-30 00:00:00

@@ -1,6 +1,9 @@
 ﻿\P\	ProductID	Name	ProductNumber	MakeFlag	FinishedGoodsFlag	Color	SafetyStockLevel	ReorderPoint	StandardCost	ListPrice	Size	SizeUnitMeasureCode	WeightUnitMeasureCode	Weight	DaysToManufacture	ProductLine	Class	Style	ProductSubcategoryID	ProductModelID	SellStartDate	SellEndDate	DiscontinuedDate	rowguid	ModifiedDate\
 T	5	$	$	0	0	$	5	5	7	7	$	$	$	7	5	$	$	$	5	5	D	D	D	U	D
 N	0	1	1	0	0	1	0	0	0	0	1	1	1	0	0	1	1	1	0	0	0	0	0	0	0
+K	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+t												UnitMeasure	UnitMeasure						ProductSubcategory	ProductModel					
+c												UnitMeasureCode	UnitMeasureCode						ProductSubcategoryID	ProductModelID					
 #
 V	1	Adjustable Race	AR-5381	0	0		1000	750	0	0					0						2008-04-30 00:00:00			{694215B7-08F7-4C0D-ACB1-D734BA44C0C8}	2014-02-08 10:01:36.827000000
 V	2	Bearing Ball	BA-8327	0	0		1000	750	0	0					0						2008-04-30 00:00:00			{58AE3C20-4F3A-4749-A7D4-D568806CC537}	2014-02-08 10:01:36.827000000

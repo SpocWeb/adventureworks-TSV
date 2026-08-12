@@ -1,6 +1,9 @@
 ﻿\P\	BusinessEntityID	TerritoryID	SalesQuota	Bonus	CommissionPct	SalesYTD	SalesLastYear	rowguid	ModifiedDate\
 T	5	5	7	7	7	7	7	U	D
 N	0	0	0	0	0	0	0	0	0
+K	1	0	0	0	0	0	0	0	0
+t	Employee	SalesTerritory							
+c	BusinessEntityID	TerritoryID							
 #
 V	274			0	0	559697.5639	0	{48754992-9EE0-4C0E-8C94-9451604E3E02}	2010-12-28 00:00:00
 V	275	2	300000	4100	0.012	3763178.1787	1750406.4785	{1E0A7274-3064-4F58-88EE-4C6586C87169}	2011-05-24 00:00:00

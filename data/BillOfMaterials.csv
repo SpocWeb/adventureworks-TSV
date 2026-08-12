@@ -1,6 +1,9 @@
 ﻿\P\	BillOfMaterialsID	ProductAssemblyID	ComponentID	StartDate	EndDate	UnitMeasureCode	BOMLevel	PerAssemblyQty	ModifiedDate\
 T	5	5	5	D	D	$	5	7	D
 N	0	0	0	0	0	1	0	0	0
+K	1	0	0	0	0	0	0	0	0
+t		Product	Product			UnitMeasure			
+c		ProductID	ProductID			UnitMeasureCode			
 #
 V	893		749	2010-05-26 00:00:00		EA 	0	1.00	2010-05-12 00:00:00
 V	271		750	2010-03-04 00:00:00	2010-05-03 00:00:00	EA 	0	1.00	2010-05-03 00:00:00

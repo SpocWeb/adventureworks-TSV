@@ -1,6 +1,9 @@
 ﻿\P\	ProductReviewID	ProductID	ReviewerName	ReviewDate	EmailAddress	Rating	Comments	ModifiedDate\
 T	5	5	$	D	$	5	$	D
 N	0	0	1	0	1	0	1	0
+K	1	0	0	0	0	0	0	0
+t		Product						
+c		ProductID						
 #
 V	1	709	John Smith	2013-09-18 00:00:00	john@fourthcoffee.com	5	I can't believe I'm singing the praises of a pair of socks, but I just came back from a grueling
 3-day ride and these socks really helped make the trip a blast. They're lightweight yet really cushioned my feet all day. 
