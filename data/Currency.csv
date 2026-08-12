@@ -1,106 +1,109 @@
-CurrencyCode	Name	ModifiedDate
-AED	Emirati Dirham	2008-04-30 00:00:00
-AFA	Afghani	2008-04-30 00:00:00
-ALL	Lek	2008-04-30 00:00:00
-AMD	Armenian Dram	2008-04-30 00:00:00
-ANG	Netherlands Antillian Guilder	2008-04-30 00:00:00
-AOA	Kwanza	2008-04-30 00:00:00
-ARS	Argentine Peso	2008-04-30 00:00:00
-ATS	Shilling	2008-04-30 00:00:00
-AUD	Australian Dollar	2008-04-30 00:00:00
-AWG	Aruban Guilder	2008-04-30 00:00:00
-AZM	Azerbaijanian Manat	2008-04-30 00:00:00
-BBD	Barbados Dollar	2008-04-30 00:00:00
-BDT	Taka	2008-04-30 00:00:00
-BEF	Belgian Franc	2008-04-30 00:00:00
-BGN	Bulgarian Lev	2008-04-30 00:00:00
-BHD	Bahraini Dinar	2008-04-30 00:00:00
-BND	Brunei Dollar	2008-04-30 00:00:00
-BOB	Boliviano	2008-04-30 00:00:00
-BRL	Brazilian Real	2008-04-30 00:00:00
-BSD	Bahamian Dollar	2008-04-30 00:00:00
-BTN	Ngultrum	2008-04-30 00:00:00
-CAD	Canadian Dollar	2008-04-30 00:00:00
-CHF	Swiss Franc	2008-04-30 00:00:00
-CLP	Chilean Peso	2008-04-30 00:00:00
-CNY	Yuan Renminbi	2008-04-30 00:00:00
-COP	Colombian Peso	2008-04-30 00:00:00
-CRC	Costa Rican Colon	2008-04-30 00:00:00
-CYP	Cyprus Pound	2008-04-30 00:00:00
-CZK	Czech Koruna	2008-04-30 00:00:00
-DEM	Deutsche Mark	2008-04-30 00:00:00
-DKK	Danish Krone	2008-04-30 00:00:00
-DOP	Dominican Peso	2008-04-30 00:00:00
-DZD	Algerian Dinar	2008-04-30 00:00:00
-EEK	Kroon	2008-04-30 00:00:00
-EGP	Egyptian Pound	2008-04-30 00:00:00
-ESP	Spanish Peseta	2008-04-30 00:00:00
-EUR	EURO	2008-04-30 00:00:00
-FIM	Markka	2008-04-30 00:00:00
-FJD	Fiji Dollar	2008-04-30 00:00:00
-FRF	French Franc	2008-04-30 00:00:00
-GBP	United Kingdom Pound	2008-04-30 00:00:00
-GHC	Cedi	2008-04-30 00:00:00
-GRD	Drachma	2008-04-30 00:00:00
-GTQ	Quetzal	2008-04-30 00:00:00
-HKD	Hong Kong Dollar	2008-04-30 00:00:00
-HRK	Croatian Kuna	2008-04-30 00:00:00
-HUF	Forint	2008-04-30 00:00:00
-IDR	Rupiah	2008-04-30 00:00:00
-IEP	Irish Pound	2008-04-30 00:00:00
-ILS	New Israeli Shekel	2008-04-30 00:00:00
-INR	Indian Rupee	2008-04-30 00:00:00
-ISK	Iceland Krona	2008-04-30 00:00:00
-ITL	Italian Lira	2008-04-30 00:00:00
-JMD	Jamaican Dollar	2008-04-30 00:00:00
-JOD	Jordanian Dinar	2008-04-30 00:00:00
-JPY	Yen	2008-04-30 00:00:00
-KES	Kenyan Shilling	2008-04-30 00:00:00
-KRW	Won	2008-04-30 00:00:00
-KWD	Kuwaiti Dinar	2008-04-30 00:00:00
-LBP	Lebanese Pound	2008-04-30 00:00:00
-LKR	Sri Lankan Rupee	2008-04-30 00:00:00
-LTL	Lithuanian Litas	2008-04-30 00:00:00
-LVL	Latvian Lats	2008-04-30 00:00:00
-MAD	Moroccan Dirham	2008-04-30 00:00:00
-MTL	Maltese Lira	2008-04-30 00:00:00
-MUR	Mauritius Rupee	2008-04-30 00:00:00
-MVR	Rufiyaa	2008-04-30 00:00:00
-MXN	Mexican Peso	2008-04-30 00:00:00
-MYR	Malaysian Ringgit	2008-04-30 00:00:00
-NAD	Namibia Dollar	2008-04-30 00:00:00
-NGN	Naira	2008-04-30 00:00:00
-NLG	Netherlands Guilder	2008-04-30 00:00:00
-NOK	Norwegian Krone	2008-04-30 00:00:00
-NPR	Nepalese Rupee	2008-04-30 00:00:00
-NZD	New Zealand Dollar	2008-04-30 00:00:00
-OMR	Omani Rial	2008-04-30 00:00:00
-PAB	Balboa	2008-04-30 00:00:00
-PEN	Nuevo Sol	2008-04-30 00:00:00
-PHP	Philippine Peso	2008-04-30 00:00:00
-PKR	Pakistan Rupee	2008-04-30 00:00:00
-PLN	Zloty	2008-04-30 00:00:00
-PLZ	Polish Zloty(old)	2008-04-30 00:00:00
-PTE	Portuguese Escudo	2008-04-30 00:00:00
-PYG	Guarani	2008-04-30 00:00:00
-ROL	Leu	2008-04-30 00:00:00
-RUB	Russian Ruble	2008-04-30 00:00:00
-RUR	Russian Ruble(old)	2008-04-30 00:00:00
-SAR	Saudi Riyal	2008-04-30 00:00:00
-SEK	Swedish Krona	2008-04-30 00:00:00
-SGD	Singapore Dollar	2008-04-30 00:00:00
-SIT	Tolar	2008-04-30 00:00:00
-SKK	Slovak Koruna	2008-04-30 00:00:00
-SVC	El Salvador Colon	2008-04-30 00:00:00
-THB	Baht	2008-04-30 00:00:00
-TND	Tunisian Dinar	2008-04-30 00:00:00
-TRL	Turkish Lira	2008-04-30 00:00:00
-TTD	Trinidad and Tobago Dollar	2008-04-30 00:00:00
-TWD	New Taiwan Dollar	2008-04-30 00:00:00
-USD	US Dollar	2008-04-30 00:00:00
-UYU	Uruguayan Peso	2008-04-30 00:00:00
-VEB	Bolivar	2008-04-30 00:00:00
-VND	Dong	2008-04-30 00:00:00
-XOF	CFA Franc BCEAO	2008-04-30 00:00:00
-ZAR	Rand	2008-04-30 00:00:00
-ZWD	Zimbabwe Dollar	2008-04-30 00:00:00
+﻿\P\	CurrencyCode	Name	ModifiedDate\
+T	$	$	D
+N	1	1	0
+#
+V	AED	Emirati Dirham	2008-04-30 00:00:00
+V	AFA	Afghani	2008-04-30 00:00:00
+V	ALL	Lek	2008-04-30 00:00:00
+V	AMD	Armenian Dram	2008-04-30 00:00:00
+V	ANG	Netherlands Antillian Guilder	2008-04-30 00:00:00
+V	AOA	Kwanza	2008-04-30 00:00:00
+V	ARS	Argentine Peso	2008-04-30 00:00:00
+V	ATS	Shilling	2008-04-30 00:00:00
+V	AUD	Australian Dollar	2008-04-30 00:00:00
+V	AWG	Aruban Guilder	2008-04-30 00:00:00
+V	AZM	Azerbaijanian Manat	2008-04-30 00:00:00
+V	BBD	Barbados Dollar	2008-04-30 00:00:00
+V	BDT	Taka	2008-04-30 00:00:00
+V	BEF	Belgian Franc	2008-04-30 00:00:00
+V	BGN	Bulgarian Lev	2008-04-30 00:00:00
+V	BHD	Bahraini Dinar	2008-04-30 00:00:00
+V	BND	Brunei Dollar	2008-04-30 00:00:00
+V	BOB	Boliviano	2008-04-30 00:00:00
+V	BRL	Brazilian Real	2008-04-30 00:00:00
+V	BSD	Bahamian Dollar	2008-04-30 00:00:00
+V	BTN	Ngultrum	2008-04-30 00:00:00
+V	CAD	Canadian Dollar	2008-04-30 00:00:00
+V	CHF	Swiss Franc	2008-04-30 00:00:00
+V	CLP	Chilean Peso	2008-04-30 00:00:00
+V	CNY	Yuan Renminbi	2008-04-30 00:00:00
+V	COP	Colombian Peso	2008-04-30 00:00:00
+V	CRC	Costa Rican Colon	2008-04-30 00:00:00
+V	CYP	Cyprus Pound	2008-04-30 00:00:00
+V	CZK	Czech Koruna	2008-04-30 00:00:00
+V	DEM	Deutsche Mark	2008-04-30 00:00:00
+V	DKK	Danish Krone	2008-04-30 00:00:00
+V	DOP	Dominican Peso	2008-04-30 00:00:00
+V	DZD	Algerian Dinar	2008-04-30 00:00:00
+V	EEK	Kroon	2008-04-30 00:00:00
+V	EGP	Egyptian Pound	2008-04-30 00:00:00
+V	ESP	Spanish Peseta	2008-04-30 00:00:00
+V	EUR	EURO	2008-04-30 00:00:00
+V	FIM	Markka	2008-04-30 00:00:00
+V	FJD	Fiji Dollar	2008-04-30 00:00:00
+V	FRF	French Franc	2008-04-30 00:00:00
+V	GBP	United Kingdom Pound	2008-04-30 00:00:00
+V	GHC	Cedi	2008-04-30 00:00:00
+V	GRD	Drachma	2008-04-30 00:00:00
+V	GTQ	Quetzal	2008-04-30 00:00:00
+V	HKD	Hong Kong Dollar	2008-04-30 00:00:00
+V	HRK	Croatian Kuna	2008-04-30 00:00:00
+V	HUF	Forint	2008-04-30 00:00:00
+V	IDR	Rupiah	2008-04-30 00:00:00
+V	IEP	Irish Pound	2008-04-30 00:00:00
+V	ILS	New Israeli Shekel	2008-04-30 00:00:00
+V	INR	Indian Rupee	2008-04-30 00:00:00
+V	ISK	Iceland Krona	2008-04-30 00:00:00
+V	ITL	Italian Lira	2008-04-30 00:00:00
+V	JMD	Jamaican Dollar	2008-04-30 00:00:00
+V	JOD	Jordanian Dinar	2008-04-30 00:00:00
+V	JPY	Yen	2008-04-30 00:00:00
+V	KES	Kenyan Shilling	2008-04-30 00:00:00
+V	KRW	Won	2008-04-30 00:00:00
+V	KWD	Kuwaiti Dinar	2008-04-30 00:00:00
+V	LBP	Lebanese Pound	2008-04-30 00:00:00
+V	LKR	Sri Lankan Rupee	2008-04-30 00:00:00
+V	LTL	Lithuanian Litas	2008-04-30 00:00:00
+V	LVL	Latvian Lats	2008-04-30 00:00:00
+V	MAD	Moroccan Dirham	2008-04-30 00:00:00
+V	MTL	Maltese Lira	2008-04-30 00:00:00
+V	MUR	Mauritius Rupee	2008-04-30 00:00:00
+V	MVR	Rufiyaa	2008-04-30 00:00:00
+V	MXN	Mexican Peso	2008-04-30 00:00:00
+V	MYR	Malaysian Ringgit	2008-04-30 00:00:00
+V	NAD	Namibia Dollar	2008-04-30 00:00:00
+V	NGN	Naira	2008-04-30 00:00:00
+V	NLG	Netherlands Guilder	2008-04-30 00:00:00
+V	NOK	Norwegian Krone	2008-04-30 00:00:00
+V	NPR	Nepalese Rupee	2008-04-30 00:00:00
+V	NZD	New Zealand Dollar	2008-04-30 00:00:00
+V	OMR	Omani Rial	2008-04-30 00:00:00
+V	PAB	Balboa	2008-04-30 00:00:00
+V	PEN	Nuevo Sol	2008-04-30 00:00:00
+V	PHP	Philippine Peso	2008-04-30 00:00:00
+V	PKR	Pakistan Rupee	2008-04-30 00:00:00
+V	PLN	Zloty	2008-04-30 00:00:00
+V	PLZ	Polish Zloty(old)	2008-04-30 00:00:00
+V	PTE	Portuguese Escudo	2008-04-30 00:00:00
+V	PYG	Guarani	2008-04-30 00:00:00
+V	ROL	Leu	2008-04-30 00:00:00
+V	RUB	Russian Ruble	2008-04-30 00:00:00
+V	RUR	Russian Ruble(old)	2008-04-30 00:00:00
+V	SAR	Saudi Riyal	2008-04-30 00:00:00
+V	SEK	Swedish Krona	2008-04-30 00:00:00
+V	SGD	Singapore Dollar	2008-04-30 00:00:00
+V	SIT	Tolar	2008-04-30 00:00:00
+V	SKK	Slovak Koruna	2008-04-30 00:00:00
+V	SVC	El Salvador Colon	2008-04-30 00:00:00
+V	THB	Baht	2008-04-30 00:00:00
+V	TND	Tunisian Dinar	2008-04-30 00:00:00
+V	TRL	Turkish Lira	2008-04-30 00:00:00
+V	TTD	Trinidad and Tobago Dollar	2008-04-30 00:00:00
+V	TWD	New Taiwan Dollar	2008-04-30 00:00:00
+V	USD	US Dollar	2008-04-30 00:00:00
+V	UYU	Uruguayan Peso	2008-04-30 00:00:00
+V	VEB	Bolivar	2008-04-30 00:00:00
+V	VND	Dong	2008-04-30 00:00:00
+V	XOF	CFA Franc BCEAO	2008-04-30 00:00:00
+V	ZAR	Rand	2008-04-30 00:00:00
+V	ZWD	Zimbabwe Dollar	2008-04-30 00:00:00
