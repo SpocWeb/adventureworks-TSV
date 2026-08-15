@@ -13,6 +13,8 @@ contains `*.PX.csv` / `*.NDX.csv` files, which are precomputed primary/secondary
 used to speed up loading — not database tables — and are excluded from the counts below, along
 with the superseded staging files `ProductModelorg.csv` and `JobCandidate_TOREMOVE.csv`.
 
+### Tables
+
 ### Table Kind Legend
 
 | Kind        |  # | Meaning                                                                                              |
@@ -24,101 +26,6 @@ with the superseded staging files `ProductModelorg.csv` and `JobCandidate_TOREMO
 | Linking     | 12 | Pure many-to-many junction table with a composite key resolving two (or more) other tables.               |
 | Total       | 68 | |
 
-
-### Tables
-
-#### Schema: Person (13 tables)
-
-| Table                  | Kind    | Rows [#] | Columns [#] | Primary Key                                        | Foreign Keys                                          |
-| ----------------------- | ------- | -------: | ----------: | --------------------------------------------------- | ----------------------------------------------------- |
-| BusinessEntity          | Primary |   20,780 |           3 | BusinessEntityID                                     |                                                       |
-| Person                  | Subtype |   19,978 |          13 | BusinessEntityID (= BusinessEntity)                  | BusinessEntity                                        |
-| StateProvince           | Primary |      187 |           8 | StateProvinceID                                      | SalesTerritory                                        |
-| Address                 | Primary |   19,620 |           9 | AddressID                                            | StateProvince                                         |
-| AddressType             | Primary |        9 |           4 | AddressTypeID                                        |                                                       |
-| BusinessEntityAddress    | Linking |   19,615 |           5 | BusinessEntityID, AddressID, AddressTypeID           | BusinessEntity, Address, AddressType                  |
-| ContactType             | Primary |       23 |           3 | ContactTypeID                                        |                                                       |
-| BusinessEntityContact    | Linking |      910 |           5 | BusinessEntityID, PersonID, ContactTypeID            | BusinessEntity, Person, ContactType                   |
-| EmailAddress            | Detail  |   19,973 |           5 | BusinessEntityID, EmailAddressID                      | Person                                                |
-| Password                | Subtype |   19,978 |           5 | BusinessEntityID (= Person)                          | Person                                                |
-| PhoneNumberType         | Primary |        6 |           3 | PhoneNumberTypeID                                    |                                                       |
-| PersonPhone             | Linking |   19,973 |           4 | BusinessEntityID, PhoneNumber, PhoneNumberTypeID     | Person, PhoneNumberType                               |
-| CountryRegion           | Primary |      241 |           3 | CountryRegionCode                                    |                                                       |
-
-#### Schema: HumanResources (6 tables)
-
-| Table                        | Kind    | Rows [#] | Columns [#] | Primary Key                                       | Foreign Keys                           |
-| ------------------------------ | ------- | -------: | ----------: | --------------------------------------------------- | -------------------------------------- |
-| Department                    | Primary |       19 |           4 | DepartmentID                                         |                                        |
-| Employee                      | Subtype |      296 |          15 | BusinessEntityID (= Person)                          | Person                                 |
-| EmployeeDepartmentHistory      | History |      297 |           6 | BusinessEntityID, DepartmentID, ShiftID, StartDate   | Employee, Department, Shift            |
-| EmployeePayHistory             | History |      317 |           5 | BusinessEntityID, RateChangeDate                     | Employee                               |
-| JobCandidate                   | Detail  |       19 |           4 | JobCandidateID                                       | Employee                               |
-| Shift                          | Primary |        6 |           5 | ShiftID                                              |                                        |
-
-#### Schema: Production (25 tables)
-
-| Table                                    | Kind    | Rows [#] | Columns [#] | Primary Key                                    | Foreign Keys                                                   |
-| ------------------------------------------- | ------- | -------: | ----------: | ------------------------------------------------ | -------------------------------------------------------------- |
-| BillOfMaterials                             | Detail  |    2,685 |           9 | BillOfMaterialsID                                 | ProductAssemblyID: Product, ComponentID: Product, UnitMeasure  |
-| Culture                                     | Primary |       11 |           3 | CultureID                                        |                                                                |
-| Document                                    | Primary |       17 |          14 | Doc / rowguid                                    |                                                                |
-| ProductCategory                             | Primary |        7 |           4 | ProductCategoryID                                |                                                                |
-| ProductSubcategory                          | Detail  |       43 |           5 | ProductSubcategoryID                             | ProductCategory                                                |
-| ProductModel                                | Primary |      132 |           6 | ProductModelID                                   |                                                                |
-| Product                                     | Primary |      510 |          25 | ProductID                                        | ProductModel, ProductSubcategory, SizeUnitMeasureCode: UnitMeasure, WeightUnitMeasureCode: UnitMeasure |
-| ProductCostHistory                          | History |      396 |           5 | ProductID, StartDate                             | Product                                                        |
-| ProductDescription                          | Primary |      765 |           4 | ProductDescriptionID                              |                                                                |
-| ProductDocument                             | Linking |       33 |           3 | ProductID, Doc                                   | Product, Document                                              |
-| Location                                    | Primary |       17 |           5 | LocationID                                       |                                                                |
-| ProductInventory                            | Detail  |    1,070 |           7 | ProductID, LocationID                            | Product, Location                                              |
-| ProductListPriceHistory                     | History |      396 |           5 | ProductID, StartDate                             | Product                                                        |
-| Illustration                                | Primary |        8 |           3 | IllustrationID                                    |                                                                |
-| ProductModelIllustration                    | Linking |        8 |           3 | ProductModelID, IllustrationID                   | ProductModel, Illustration                                     |
-| ProductModelProductDescriptionCulture       | Linking |      763 |           4 | ProductModelID, ProductDescriptionID, CultureID  | ProductModel, ProductDescription, Culture                      |
-| ProductPhoto                                | Primary |      104 |           6 | ProductPhotoID                                    |                                                                |
-| ProductProductPhoto                         | Linking |      505 |           4 | ProductID, ProductPhotoID                        | Product, ProductPhoto                                          |
-| ProductReview                               | Detail  |       10 |           8 | ProductReviewID                                   | Product                                                        |
-| ScrapReason                                 | Primary |       19 |           3 | ScrapReasonID                                     |                                                                |
-| TransactionHistory                          | History |  113,449 |           9 | TransactionID                                     | Product                                                        |
-| TransactionHistoryArchive                   | History |   89,256 |           9 | TransactionID                                     | Product                                                        |
-| UnitMeasure                                 | Primary |       41 |           3 | UnitMeasureCode                                   |                                                                |
-| WorkOrder                                   | Primary |   72,597 |          10 | WorkOrderID                                       | Product, ScrapReason                                           |
-| WorkOrderRouting                            | Detail  |   67,132 |          12 | WorkOrderID, ProductID, OperationSequence        | WorkOrder, Product, Location                                   |
-
-#### Schema: Purchasing (5 tables)
-
-| Table                | Kind    | Rows [#] | Columns [#] | Primary Key                        | Foreign Keys                              |
-| ---------------------- | ------- | -------: | ----------: | ------------------------------------ | ----------------------------------------- |
-| ProductVendor          | Linking |      461 |          11 | ProductID, BusinessEntityID          | Vendor, Product, UnitMeasure              |
-| PurchaseOrderDetail    | Detail  |    8,846 |           9 | PurchaseOrderDetailID                | PurchaseOrderHeader, Product              |
-| PurchaseOrderHeader    | Primary |    4,018 |          12 | PurchaseOrderID                      | Vendor, ShipMethod, Employee              |
-| ShipMethod             | Primary |        8 |           6 | ShipMethodID                         |                                           |
-| Vendor                 | Subtype |      110 |           8 | BusinessEntityID (= BusinessEntity)  | BusinessEntity                            |
-
-#### Schema: Sales (19 tables)
-
-| Table                          | Kind    | Rows [#] | Columns [#] | Primary Key                            | Foreign Keys                                                          |
-| --------------------------------- | ------- | -------: | ----------: | ----------------------------------------- | --------------------------------------------------------------------- |
-| CountryRegionCurrency              | Linking |      110 |           3 | CountryRegionCode, CurrencyCode           | CountryRegion, Currency                                               |
-| CreditCard                        | Primary |   19,121 |           6 | CreditCardID                              |                                                                       |
-| Currency                          | Primary |      108 |           3 | CurrencyCode                              |                                                                       |
-| CurrencyRate                      | Primary |   13,538 |           7 | CurrencyRateID                            | FromCurrencyCode: Currency, ToCurrencyCode: Currency                  |
-| Customer                          | Primary |   19,826 |           6 | CustomerID                                | Person, Store, SalesTerritory                                         |
-| PersonCreditCard                  | Linking |   19,119 |           3 | BusinessEntityID, CreditCardID            | Person, CreditCard                                                    |
-| SalesOrderDetail                  | Detail  |  121,318 |          10 | SalesOrderID, SalesOrderDetailID          | SalesOrderHeader, SpecialOfferProduct                                 |
-| SalesOrderHeader                  | Primary |   31,471 |          25 | SalesOrderID                              | Customer, SalesPerson, BillToAddressID: Address, ShipToAddressID: Address, ShipMethod, CreditCard, CurrencyRate |
-| SalesOrderHeaderSalesReason        | Linking |   27,648 |           3 | SalesOrderID, SalesReasonID               | SalesOrderHeader, SalesReason                                         |
-| SalesPerson                       | Subtype |       23 |           9 | BusinessEntityID (= Employee)             | Employee                                                              |
-| SalesPersonQuotaHistory           | History |      164 |           5 | BusinessEntityID, QuotaDate               | SalesPerson, SalesTerritory                                           |
-| SalesReason                       | Primary |       13 |           4 | SalesReasonID                             |                                                                       |
-| SalesTaxRate                      | Detail  |       35 |           7 | SalesTaxRateID                            | StateProvince                                                         |
-| SalesTerritory                    | Primary |       16 |          10 | TerritoryID                               | CountryRegion                                                         |
-| SalesTerritoryHistory             | History |       18 |           6 | BusinessEntityID, TerritoryID, StartDate  | SalesPerson, SalesTerritory                                           |
-| ShoppingCartItem                  | Detail  |        9 |           6 | ShoppingCartItemID                        | Product                                                               |
-| SpecialOffer                      | Primary |       19 |          11 | SpecialOfferID                            |                                                                       |
-| SpecialOfferProduct                | Linking |      539 |           4 | SpecialOfferID, ProductID                 | SpecialOffer, Product                                                 |
-| Store                             | Subtype |      707 |           6 | BusinessEntityID (= BusinessEntity)       | BusinessEntity, SalesPerson                                           |
 
 ### Table Dependency Flow Diagram
 
@@ -744,9 +651,25 @@ inbound and outbound cross-schema references stay visible without pulling in tha
 internal structure — see the [combined diagrams](#table-dependency-flow-diagram) above for the
 whole picture at once.
 
-### Person
+### Schema: Person (13 tables)
 
-##### Flow Diagram
+| Table                  | Kind    | Rows [#] | Columns [#] | Primary Key                                        | Foreign Keys                                          |
+| ----------------------- | ------- | -------: | ----------: | --------------------------------------------------- | ----------------------------------------------------- |
+| BusinessEntity          | Primary |   20,780 |           3 | BusinessEntityID                                     |                                                       |
+| Person                  | Subtype |   19,978 |          13 | BusinessEntityID (= BusinessEntity)                  | BusinessEntity                                        |
+| StateProvince           | Primary |      187 |           8 | StateProvinceID                                      | SalesTerritory                                        |
+| Address                 | Primary |   19,620 |           9 | AddressID                                            | StateProvince                                         |
+| AddressType             | Primary |        9 |           4 | AddressTypeID                                        |                                                       |
+| BusinessEntityAddress    | Linking |   19,615 |           5 | BusinessEntityID, AddressID, AddressTypeID           | BusinessEntity, Address, AddressType                  |
+| ContactType             | Primary |       23 |           3 | ContactTypeID                                        |                                                       |
+| BusinessEntityContact    | Linking |      910 |           5 | BusinessEntityID, PersonID, ContactTypeID            | BusinessEntity, Person, ContactType                   |
+| EmailAddress            | Detail  |   19,973 |           5 | BusinessEntityID, EmailAddressID                      | Person                                                |
+| Password                | Subtype |   19,978 |           5 | BusinessEntityID (= Person)                          | Person                                                |
+| PhoneNumberType         | Primary |        6 |           3 | PhoneNumberTypeID                                    |                                                       |
+| PersonPhone             | Linking |   19,973 |           4 | BusinessEntityID, PhoneNumber, PhoneNumberTypeID     | Person, PhoneNumberType                               |
+| CountryRegion           | Primary |      241 |           3 | CountryRegionCode                                    |                                                       |
+
+##### Person Flow Diagram
 
 ```mermaid
 flowchart LR
@@ -816,7 +739,7 @@ flowchart LR
   class CountryRegionCurrency,Customer,PersonCreditCard,SalesOrderHeader,SalesTaxRate,SalesTerritory,Store,Employee,Vendor ext
 ```
 
-##### Entity-Relationship Diagram
+##### Person Entity-Relationship Diagram
 
 ```mermaid
 erDiagram
@@ -941,9 +864,18 @@ erDiagram
     SalesTerritory ||--o{ StateProvince : "TerritoryID"
 ```
 
-### HumanResources
+### Schema: HumanResources (6 tables)
 
-##### Flow Diagram
+| Table                        | Kind    | Rows [#] | Columns [#] | Primary Key                                       | Foreign Keys                           |
+| ------------------------------ | ------- | -------: | ----------: | --------------------------------------------------- | -------------------------------------- |
+| Department                    | Primary |       19 |           4 | DepartmentID                                         |                                        |
+| Employee                      | Subtype |      296 |          15 | BusinessEntityID (= Person)                          | Person                                 |
+| EmployeeDepartmentHistory      | History |      297 |           6 | BusinessEntityID, DepartmentID, ShiftID, StartDate   | Employee, Department, Shift            |
+| EmployeePayHistory             | History |      317 |           5 | BusinessEntityID, RateChangeDate                     | Employee                               |
+| JobCandidate                   | Detail  |       19 |           4 | JobCandidateID                                       | Employee                               |
+| Shift                          | Primary |        6 |           5 | ShiftID                                              |                                        |
+
+##### HumanResources Flow Diagram
 
 ```mermaid
 flowchart LR
@@ -978,7 +910,7 @@ flowchart LR
   class Document,PurchaseOrderHeader,SalesPerson,Person ext
 ```
 
-##### Entity-Relationship Diagram
+##### HumanResources Entity-Relationship Diagram
 
 ```mermaid
 erDiagram
@@ -1039,9 +971,37 @@ erDiagram
     Person ||--|| Employee : "BusinessEntityID"
 ```
 
-### Production
+#### Schema: Production (25 tables)
 
-##### Flow Diagram
+| Table                                    | Kind    | Rows [#] | Columns [#] | Primary Key                                    | Foreign Keys                                                   |
+| ------------------------------------------- | ------- | -------: | ----------: | ------------------------------------------------ | -------------------------------------------------------------- |
+| BillOfMaterials                             | Detail  |    2,685 |           9 | BillOfMaterialsID                                 | ProductAssemblyID: Product, ComponentID: Product, UnitMeasure  |
+| Culture                                     | Primary |       11 |           3 | CultureID                                        |                                                                |
+| Document                                    | Primary |       17 |          14 | Doc / rowguid                                    |                                                                |
+| ProductCategory                             | Primary |        7 |           4 | ProductCategoryID                                |                                                                |
+| ProductSubcategory                          | Detail  |       43 |           5 | ProductSubcategoryID                             | ProductCategory                                                |
+| ProductModel                                | Primary |      132 |           6 | ProductModelID                                   |                                                                |
+| Product                                     | Primary |      510 |          25 | ProductID                                        | ProductModel, ProductSubcategory, SizeUnitMeasureCode: UnitMeasure, WeightUnitMeasureCode: UnitMeasure |
+| ProductCostHistory                          | History |      396 |           5 | ProductID, StartDate                             | Product                                                        |
+| ProductDescription                          | Primary |      765 |           4 | ProductDescriptionID                              |                                                                |
+| ProductDocument                             | Linking |       33 |           3 | ProductID, Doc                                   | Product, Document                                              |
+| Location                                    | Primary |       17 |           5 | LocationID                                       |                                                                |
+| ProductInventory                            | Detail  |    1,070 |           7 | ProductID, LocationID                            | Product, Location                                              |
+| ProductListPriceHistory                     | History |      396 |           5 | ProductID, StartDate                             | Product                                                        |
+| Illustration                                | Primary |        8 |           3 | IllustrationID                                    |                                                                |
+| ProductModelIllustration                    | Linking |        8 |           3 | ProductModelID, IllustrationID                   | ProductModel, Illustration                                     |
+| ProductModelProductDescriptionCulture       | Linking |      763 |           4 | ProductModelID, ProductDescriptionID, CultureID  | ProductModel, ProductDescription, Culture                      |
+| ProductPhoto                                | Primary |      104 |           6 | ProductPhotoID                                    |                                                                |
+| ProductProductPhoto                         | Linking |      505 |           4 | ProductID, ProductPhotoID                        | Product, ProductPhoto                                          |
+| ProductReview                               | Detail  |       10 |           8 | ProductReviewID                                   | Product                                                        |
+| ScrapReason                                 | Primary |       19 |           3 | ScrapReasonID                                     |                                                                |
+| TransactionHistory                          | History |  113,449 |           9 | TransactionID                                     | Product                                                        |
+| TransactionHistoryArchive                   | History |   89,256 |           9 | TransactionID                                     | Product                                                        |
+| UnitMeasure                                 | Primary |       41 |           3 | UnitMeasureCode                                   |                                                                |
+| WorkOrder                                   | Primary |   72,597 |          10 | WorkOrderID                                       | Product, ScrapReason                                           |
+| WorkOrderRouting                            | Detail  |   67,132 |          12 | WorkOrderID, ProductID, OperationSequence        | WorkOrder, Product, Location                                   |
+
+#### Production Flow Diagram
 
 ```mermaid
 flowchart LR
@@ -1133,7 +1093,7 @@ flowchart LR
   class Employee,ProductVendor,PurchaseOrderDetail,ShoppingCartItem,SpecialOfferProduct ext
 ```
 
-##### Entity-Relationship Diagram
+#### Production Entity-Relationship Diagram
 
 ```mermaid
 erDiagram
@@ -1300,9 +1260,18 @@ erDiagram
     Product ||--o{ SpecialOfferProduct : "ProductID"
 ```
 
-### Purchasing
+### Schema: Purchasing (5 tables)
 
-##### Flow Diagram
+| Table                | Kind    | Rows [#] | Columns [#] | Primary Key                        | Foreign Keys                              |
+| ---------------------- | ------- | -------: | ----------: | ------------------------------------ | ----------------------------------------- |
+| ProductVendor          | Linking |      461 |          11 | ProductID, BusinessEntityID          | Vendor, Product, UnitMeasure              |
+| PurchaseOrderDetail    | Detail  |    8,846 |           9 | PurchaseOrderDetailID                | PurchaseOrderHeader, Product              |
+| PurchaseOrderHeader    | Primary |    4,018 |          12 | PurchaseOrderID                      | Vendor, ShipMethod, Employee              |
+| ShipMethod             | Primary |        8 |           6 | ShipMethodID                         |                                           |
+| Vendor                 | Subtype |      110 |           8 | BusinessEntityID (= BusinessEntity)  | BusinessEntity                            |
+
+
+#### Purchasing Flow Diagram
 
 ```mermaid
 flowchart LR
@@ -1340,7 +1309,7 @@ flowchart LR
   class Product,UnitMeasure,Employee,BusinessEntity,SalesOrderHeader ext
 ```
 
-##### Entity-Relationship Diagram
+#### Purchasing Entity-Relationship Diagram
 
 ```mermaid
 erDiagram
@@ -1404,9 +1373,31 @@ erDiagram
     ShipMethod ||--o{ SalesOrderHeader : "ShipMethodID"
 ```
 
-### Sales
+### Schema: Sales (19 tables)
 
-##### Flow Diagram
+| Table                          | Kind    | Rows [#] | Columns [#] | Primary Key                            | Foreign Keys                                                          |
+| --------------------------------- | ------- | -------: | ----------: | ----------------------------------------- | --------------------------------------------------------------------- |
+| CountryRegionCurrency              | Linking |      110 |           3 | CountryRegionCode, CurrencyCode           | CountryRegion, Currency                                               |
+| CreditCard                        | Primary |   19,121 |           6 | CreditCardID                              |                                                                       |
+| Currency                          | Primary |      108 |           3 | CurrencyCode                              |                                                                       |
+| CurrencyRate                      | Primary |   13,538 |           7 | CurrencyRateID                            | FromCurrencyCode: Currency, ToCurrencyCode: Currency                  |
+| Customer                          | Primary |   19,826 |           6 | CustomerID                                | Person, Store, SalesTerritory                                         |
+| PersonCreditCard                  | Linking |   19,119 |           3 | BusinessEntityID, CreditCardID            | Person, CreditCard                                                    |
+| SalesOrderDetail                  | Detail  |  121,318 |          10 | SalesOrderID, SalesOrderDetailID          | SalesOrderHeader, SpecialOfferProduct                                 |
+| SalesOrderHeader                  | Primary |   31,471 |          25 | SalesOrderID                              | Customer, SalesPerson, BillToAddressID: Address, ShipToAddressID: Address, ShipMethod, CreditCard, CurrencyRate |
+| SalesOrderHeaderSalesReason        | Linking |   27,648 |           3 | SalesOrderID, SalesReasonID               | SalesOrderHeader, SalesReason                                         |
+| SalesPerson                       | Subtype |       23 |           9 | BusinessEntityID (= Employee)             | Employee                                                              |
+| SalesPersonQuotaHistory           | History |      164 |           5 | BusinessEntityID, QuotaDate               | SalesPerson, SalesTerritory                                           |
+| SalesReason                       | Primary |       13 |           4 | SalesReasonID                             |                                                                       |
+| SalesTaxRate                      | Detail  |       35 |           7 | SalesTaxRateID                            | StateProvince                                                         |
+| SalesTerritory                    | Primary |       16 |          10 | TerritoryID                               | CountryRegion                                                         |
+| SalesTerritoryHistory             | History |       18 |           6 | BusinessEntityID, TerritoryID, StartDate  | SalesPerson, SalesTerritory                                           |
+| ShoppingCartItem                  | Detail  |        9 |           6 | ShoppingCartItemID                        | Product                                                               |
+| SpecialOffer                      | Primary |       19 |          11 | SpecialOfferID                            |                                                                       |
+| SpecialOfferProduct                | Linking |      539 |           4 | SpecialOfferID, ProductID                 | SpecialOffer, Product                                                 |
+| Store                             | Subtype |      707 |           6 | BusinessEntityID (= BusinessEntity)       | BusinessEntity, SalesPerson                                           |
+
+#### Sales Flow Diagram
 
 ```mermaid
 flowchart LR
@@ -1494,7 +1485,7 @@ flowchart LR
   class CountryRegion,Person,Address,StateProvince,BusinessEntity,ShipMethod,Employee,Product ext
 ```
 
-##### Entity-Relationship Diagram
+#### SalesEntity-Relationship Diagram
 
 ```mermaid
 erDiagram
@@ -1655,7 +1646,7 @@ erDiagram
     BusinessEntity ||--|| Store : "BusinessEntityID"
 ```
 
-# Import to Postgres
+## Import to Postgres
 
 This is based off the work done by [lorint](https://github.com/lorint/AdventureWorks-for-Postgres) and [josibake](https://github.com/NorfolkDataSci/adventure-works-postgres/) with minor script changes to fix relative paths and updated docs for remote server installation (in this case, an AWS RDS cluster). The included csv's have been converted already to be compatible with postgres. If you would like the original files, head over to [Adventure Works 2014 OLTP](https://msftdbprodsamples.codeplex.com/downloads/get/880662) download page. The download includes a script for loading the data into MSSQL Server.
 
