@@ -4,7 +4,7 @@ N	0	0	0	0	1	0	0
 K	1	0	0	0	0	0	0
 t		StateProvince					
 c		StateProvinceID					
-#
+#							
 V	1	1	1	14	Canadian GST + Alberta Provincial Tax	{683DE5DD-521A-47D4-A573-06A3CDB1BC5D}	2008-04-30 00:00:00
 V	2	57	1	14.25	Canadian GST + Ontario Provincial Tax	{05C4FFDB-4F84-4CDF-ABE5-FDF3216EA74E}	2008-04-30 00:00:00
 V	3	63	1	14.25	Canadian GST + Quebec Provincial Tax	{D4EDB557-56D7-403C-B538-4DF5E7302588}	2008-04-30 00:00:00

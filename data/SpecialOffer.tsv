@@ -1,7 +1,7 @@
 ﻿\P\	SpecialOfferID	Description	DiscountPct	Type	Category	StartDate	EndDate	MinQty	MaxQty	rowguid	ModifiedDate\
 T	5	$	7	$	$	D	D	5	5	U	D
 N	0	1	0	1	1	0	0	0	0	0	0
-#
+#											
 V	1	No Discount	0	No Discount	No Discount	2011-05-01 00:00:00	2014-11-30 00:00:00	0		{0290C4F5-191F-4337-AB6B-0A2DDE03CBF9}	2011-04-01 00:00:00
 V	2	Volume Discount 11 to 14	0.02	Volume Discount	Reseller	2011-05-31 00:00:00	2014-05-30 00:00:00	11	14	{D7542EE7-15DB-4541-985C-5CC27AEF26D6}	2011-05-01 00:00:00
 V	3	Volume Discount 15 to 24	0.05	Volume Discount	Reseller	2011-05-31 00:00:00	2014-05-30 00:00:00	15	24	{4BDBCC01-8CF7-40A9-B643-40EC5B717491}	2011-05-01 00:00:00

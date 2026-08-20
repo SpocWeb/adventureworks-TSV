@@ -1,7 +1,7 @@
 ﻿\P\	CreditCardID	CardType	CardNumber	ExpMonth	ExpYear	ModifiedDate\
 T	5	$	$	5	5	D
 N	0	1	1	0	0	0
-#
+#						
 V	1	SuperiorCard	33332664695310	11	2006	2013-07-29 00:00:00
 V	2	Distinguish	55552127249722	8	2005	2013-12-05 00:00:00
 V	3	ColonialVoice	77778344838353	7	2005	2014-01-14 00:00:00
