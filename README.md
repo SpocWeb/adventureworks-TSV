@@ -17,14 +17,17 @@ with the superseded staging files `ProductModelorg.csv` and `JobCandidate_TOREMO
 
 ### Table Kind Legend
 
-| Kind        |  # | Meaning                                                                                              |
-| ----------- | ---| ------------------------------------------------------------------------------------------------------ |
-| Primary     | 31 | Independent master/reference entity; owns its own identity and surrogate or natural key.                |
-| Subtype     |  6 | 1:1 extension row whose primary key is also a foreign key to its supertype (e.g. `Employee` extends `Person`). |
-| Detail      | 11 | Structural or line-item child row (order lines, cart items, hierarchy members) tied to one parent.        |
-| History     |  8 | Temporal/versioned or append-only log row tracking how a parent's data changed over time.                |
-| Linking     | 12 | Pure many-to-many junction table with a composite key resolving two (or more) other tables.               |
-| Total       | 68 | |
+| Kind        |  # | PK | FK | Meaning                                                                                              |
+| ----------- | ---| ---| ---| ------------------------------------------------------------------------------------------------------ |
+| Lookup      | 31 | ID | -  | Static Reference/controlled-vocabulary entity; Rows are relatively stable and usually referenced by other entities. surrogate or natural key.                |
+| Primary     | 31 | ID |    | Independent master entity; owns its own identity and surrogate or natural key.                |
+| Subtype     |  6 | ParentID | ParentID | 1:1 extension row whose primary key is also a foreign key to its supertype (e.g. `Employee` extends `Person`). |
+| Detail      | 11 | ParentID + Pos  | ParentID | Structural or line-item child row (order lines, cart items, hierarchy members) tied to one parent.        |
+| History     |  8 | ParentID + Date | ParentID | Temporal/versioned or append-only log row tracking how a parent's data changed over time.                |
+| Linking     | 12 | FK1, FK2...     | FK1, FK2... | N:M junction table; only a composite unique key to two (or more) other tables.               |
+| Association | 12 | FK1, FK2...     | FK1, FK2... | N:M table with additional Columns.               |
+| Link-Entity | 12 | ID2 | FK1, FK2... | N:M table plus a Primary key referenced by other tables and additional Columns.               |
+| Total       | 68 |  |  |  | |
 
 
 ### Table Dependency Flow Diagram
