@@ -1,4 +1,9 @@
-OpFlag	SalesOrderID	SalesReasonID	ModifiedDate
+﻿\P\	SalesOrderID	SalesReasonID	ModifiedDate\
+T	5	5	D
+N	0	0	0
+K	1	2	0
+G	"
+#
 V	43697	5	2011-05-31 00:00:00
 V	43697	9	2011-05-31 00:00:00
 V	43702	5	2011-06-01 00:00:00

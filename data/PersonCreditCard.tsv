@@ -1,4 +1,7 @@
-OpFlag	BusinessEntityID	CreditCardID	ModifiedDate
+﻿\P\	BusinessEntityID	CreditCardID	ModifiedDate\
+K	1	0	0
+G	"
+#
 V	293	17038	2013-07-31 00:00:00
 V	295	15369	2011-08-01 00:00:00
 V	297	8010	2011-08-01 00:00:00
