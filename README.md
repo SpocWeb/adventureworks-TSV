@@ -1659,6 +1659,36 @@ erDiagram
     BusinessEntity ||--|| Store : "BusinessEntityID"
 ```
 
+### Schema: dbo (2 tables)
+
+Database-level housekeeping tables outside the four business schemas. Neither references nor is referenced by any other table. By key shape (own primary key, no foreign key) both classify as `Primary`, although by purpose `AWBuildVersion` is a single-row version stamp and `ErrorLog` an append-only error log, empty in this export.
+
+| Table          | Kind    | Rows [#] | Columns [#] | Primary Key         | Foreign Keys |
+| -------------- | ------- | -------: | ----------: | ------------------- | ------------ |
+| AWBuildVersion | Primary |        1 |           4 | SystemInformationID |              |
+| ErrorLog       | Primary |        0 |           9 | ErrorLogID          |              |
+
+```mermaid
+erDiagram
+    AWBuildVersion {
+        tinyint SystemInformationID PK
+        varchar DatabaseVersion
+        datetime VersionDate
+        datetime ModifiedDate
+    }
+    ErrorLog {
+        int ErrorLogID PK
+        datetime ErrorTime
+        varchar UserName
+        int ErrorNumber
+        int ErrorSeverity
+        int ErrorState
+        varchar ErrorProcedure
+        int ErrorLine
+        varchar ErrorMessage
+    }
+```
+
 ## Import to Postgres
 
 This is based off the work done by [lorint](https://github.com/lorint/AdventureWorks-for-Postgres) and [josibake](https://github.com/NorfolkDataSci/adventure-works-postgres/) with minor script changes to fix relative paths and updated docs for remote server installation (in this case, an AWS RDS cluster). The included csv's have been converted already to be compatible with postgres. If you would like the original files, head over to [Adventure Works 2014 OLTP](https://msftdbprodsamples.codeplex.com/downloads/get/880662) download page. The download includes a script for loading the data into MSSQL Server.
